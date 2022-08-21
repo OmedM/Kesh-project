@@ -17,7 +17,7 @@ function SearchBar() {
         }
         else
         {
-            dispatch(weatherActions.newData(data));
+            dispatch(weatherActions.NewData(data));
             setData('');
         }
     }

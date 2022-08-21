@@ -8,12 +8,12 @@ const weatherSlice = createSlice({
         weatherData: []
     },
     reducers: {
-        newData(state, action) {
+        NewData(state, action) {
             const API = `https://api.openweathermap.org/data/2.5/forecast?q=${action.payload}&appid=${state.APIkey}`;
 
-            axios.get(API).then((response) => { console.log(response.data) });
-        
-            
+            axios.get(API).then((response) => {
+                console.log(response.data)
+            });
         }
     }
 });
