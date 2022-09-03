@@ -8,13 +8,15 @@ import axios from 'axios';
 function SearchBar() {
     const [data, setData] = useState('');
 
+    const [placeholder, setPlaceholder] = useState('Search');
+
     const dispatch = useDispatch();
     const key = useSelector((state) => state.weather.APIkey);
 
     const handleEvent = async () => {
         if(data == '')
         {
-            alert('Please enter your city name');
+            setPlaceholder('Please enter a city name here');
         }
         else
         {
@@ -24,9 +26,11 @@ function SearchBar() {
             const res = await axios.get(API)
                 dispatch(weatherActions.NewData(res.data));
                 setData('');
+                setPlaceholder('Search')
             }
             catch (errors) {
-                alert('This city is not on earth');
+                setData()
+                setPlaceholder('This city is not on earth');
             }
         }
     }
@@ -35,7 +39,7 @@ function SearchBar() {
             <input
             className='searchInput'
             type='text'
-            placeholder='Search'
+            placeholder={placeholder}
             value={data || ''}
             onChange={(e) => setData(e.target.value)}
             />
