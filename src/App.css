@@ -41,7 +41,6 @@ input[type="text"] {
     align-items: center;
     justify-content: space-between;
     height: 100vh;
-    background: url(https://images.pexels.com/photos/304875/pexels-photo-304875.jpeg?cs=srgb&dl=pexels-veeterzy-304875.jpg&fm=jpg);
     background-size: cover;
     background-position: center;
 }
@@ -52,13 +51,14 @@ input[type="text"] {
     justify-content: space-between;
     padding: 1rem;
     margin: 1rem;
-    width: 50%;
+    width: 100%;
+    max-width: 700px;
     height: 1rem;
     border-radius: 1000rem;
     background: rgb(255,255,255);
     background: linear-gradient(315deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 100%);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .searchInput {
@@ -96,6 +96,17 @@ input[type="text"] {
     border: none;
 }
 
+.mainSectionMainContainer {
+    height: 300px;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 1.2rem;
+    background: rgb(255,255,255);
+    background: linear-gradient(315deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 .footerMainContainer {
     display: flex;
     align-items: center;
@@ -104,6 +115,6 @@ input[type="text"] {
     padding: 0.6rem 0.8rem;
     background: rgb(255,255,255);
     background: linear-gradient(315deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 100%);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
