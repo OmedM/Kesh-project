@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { weatherActions } from '../redux/weather-slice.js';
 import searchIcon from '../figures/search-icon.png';
