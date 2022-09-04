@@ -8,7 +8,7 @@ import axios from 'axios';
 function SearchBar() {
     const [data, setData] = useState('');
 
-    const [placeholder, setPlaceholder] = useState('Search');
+    const [placeholder, setPlaceholder] = useState('Enter a city name');
 
     const dispatch = useDispatch();
     const key = useSelector((state) => state.weather.APIkey);
@@ -26,7 +26,7 @@ function SearchBar() {
             const res = await axios.get(API)
                 dispatch(weatherActions.NewData(res.data));
                 setData('');
-                setPlaceholder('Search')
+                setPlaceholder('Enter a city name')
             }
             catch (errors) {
                 setData()

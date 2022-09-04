@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
+import { useSelector } from 'react-redux';
 import SearchBar from './components/search-bar.js';
 import MainSection from './components/mainBox.js';
 import Footer from './components/footer.js';
 
 function App() {
+
+    const data = useSelector((state) => state.weather.weatherData);
+
     return (
         <div className='mainContainer'>
 
@@ -19,7 +23,7 @@ function App() {
             </div>
 
             <SearchBar />
-            <MainSection />
+            {data? <MainSection /> : <></>}
             <Footer />
         </div>
     )
