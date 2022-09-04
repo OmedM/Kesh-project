@@ -4,6 +4,7 @@ const weatherSlice = createSlice({
     name: 'weather',
     initialState: {
         APIkey: '9b766b252617b12c13adf366d8702256',
+        layers: true,
         weatherData: {}
     },
     reducers: {
