@@ -45,9 +45,9 @@ function SearchBar() {
             />
             <div className='searchIconContainer'>
                 <div className='searchVLine'></div>
-                <button onClick={handleEvent} className='searchMagnifierIcon'><img src={searchIcon} style={{height: "20px"}}/></button>
+                <button onClick={handleEvent} className='searchMagnifierIcon'><img src={searchIcon} style={{ height: "20px", cursor: 'pointer' }}/></button>
                 <div className='searchVLine'></div>
-                <button className='searchHidingIcon'><img src={hideIcon} style={{height: "20px"}}/></button>
+                <button className='searchHidingIcon'><img src={hideIcon} style={{ height: "20px", cursor: 'pointer' }}/></button>
             </div>
         </div>
     )
