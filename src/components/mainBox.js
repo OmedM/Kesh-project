@@ -28,7 +28,7 @@ function MainSection() {
 
     return (
         <div className="mainSectionMainContainer">
-            <p style={{ fontSize: '40pt' }}>{data.city.name}</p>
+            <p style={{ fontSize: '40pt' }}></p>
         </div>
     )
 }
